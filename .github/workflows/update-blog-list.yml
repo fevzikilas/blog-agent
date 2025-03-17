@@ -19,7 +19,7 @@ jobs:
           echo "[" > blog-list.json
           for file in blogs/*.html; do
             title=$(grep -o '<title>.*</title>' "$file" | sed 's/<\/\?title>//g')
-            echo "{ \"title\": \"$title\", \"url\": \"$file\", \"date\": \"$(date -r "$file" +%Y-%m-%d)\" }," >> blog-list.json
+            echo "{ \"title\": \"$title\", \"url\": \"$file\", \"date\": \"$(date -r "$file" +%Y-%m-%d %H:%M)\" }," >> blog-list.json
           done
           sed -i '$ s/,$//' blog-list.json
           echo "]" >> blog-list.json
