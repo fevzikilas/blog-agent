@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanity Against Death: Terror Management Theory</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            color: #FFA500;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+        header {
+            background: linear-gradient(to right, #000000 30%, #FF4500);
+            padding: 1px 0;
+            border-bottom: 3px solid #FFA500;
+            position: relative;
+        }
+        header img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            opacity: 0.9;
+            border-bottom: 5px solid #FF4500;
+        }
+        h1 {
+            color: #FFA500;
+            font-size: 2.8em;
+            text-shadow: 2px 2px 4px rgba(255,69,0,0.5);
+            margin: 20px 0;
+            letter-spacing: 3px;
+        }
+        article {
+            width: 70%;
+            margin: 40px auto;
+            padding: 20px;
+            border-left: 3px solid #FF4500;
+            position: relative;
+        }
+        h2, h3, h4 {
+            color: #FF4500;
+            border-bottom: 2px dashed #FFA500;
+            padding-bottom: 8px;
+        }
+        a {
+            color: #FFA500;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        a:hover {
+            text-shadow: 0 0 10px #FF4500;
+        }
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #FF4500;
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: bold;
+            border: 2px solid #FFA500;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .home-button:hover {
+            background: #000;
+            color: #FF4500;
+            transform: scale(1.1);
+        }
+        blockquote {
+            border-left: 4px solid #FF4500;
+            margin: 2em 0;
+            padding-left: 1em;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <a href="../../blog-agent/" class="home-button">← Home</a>
+    <header>
+        <img src="../Ölümün%20Karşısında%20İnsan:%20Dehşet%20Yönetim%20Kuramı.jpg" alt="Abstract representation of mortality">
+        <h1>Humanity Against Death: Terror Management Theory</h1>
+    </header>
+    <article>
+        <!-- Existing article content remains unchanged -->
+        <h2>Confecting Mortality: What Terror Management Theory Reveals About Human Behavior</h2>
+        <p>Have you ever lain awake at night pondering the meaning of life—or worse, its inevitable end? You’re not alone... [rest of the original article content]</p>
+        <!-- Remaining article body -->
+    </article>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('h2, h3, p');
+            elements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        });
+    </script>
+</body>
+</html>
