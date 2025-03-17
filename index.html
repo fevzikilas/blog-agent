@@ -55,11 +55,22 @@
         <div class="header">
             <h1>Bolgs</h1>
         </div>
-        <ul class="blog-list" >
-            <li><a href="blogs/index.html">İlk Yazı</a></li>
-            <li><a href="blogs/index2.html">İlk Yazı</a></li>
-            <li><a href="blogs/Ölümün Karşısında İnsan: Dehşet Yönetim Kuramı/index.html">Ölümün Karşısında İnsan: Dehşet Yönetim Kuramı</a></li>
-        </ul>
+        <ul id="blog-list"></ul>
     </div>
 </body>
+
+<script>
+    fetch("blog-list.json")
+      .then(response => response.json())
+      .then(blogs => {
+        let blogList = document.getElementById("blog-list");
+        blogs.forEach(blog => {
+          let listItem = document.createElement("li");
+          listItem.innerHTML = `<a href="${blog.url}">${blog.title} - ${blog.date}</a>`;
+          blogList.appendChild(listItem);
+        });
+      })
+      .catch(error => console.error("Blogları yüklerken hata oluştu:", error));
+  </script>
+
 </html>
