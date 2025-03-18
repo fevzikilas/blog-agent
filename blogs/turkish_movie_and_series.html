@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             color: #333;
-            background-color: #f4f4f4;
+            background-color: #000000;
             margin: 0;
             padding: 0;
         }
@@ -17,7 +17,10 @@
             text-decoration: none;
         }
         a:hover {
-            color: #000;
+            color: #fa5c00;
+        }
+        p {
+            color: #fa5c00;
         }
         h1 {
             color: #cc5500;
@@ -30,7 +33,7 @@
             overflow: hidden;
         }
         .content {
-            background: #fff;
+            background: #000000;
             padding: 20px;
         }
         .content p {
@@ -44,16 +47,37 @@
         }
         h2 {
             color: #cc5500;
-            border-bottom: 1px #ddd solid;
+            border-bottom: 1px #000000 solid;
             padding-bottom: 10px;
+        }
+        .return-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #FF6600;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        return-btn a{
+            color: #000000;
+        }
+        .return-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255,102,0,0.6);
         }
     </style>
 </head>
 <body>
-    <div class="banner"></div>
+    <div class="banner">
         <img src="../turkish_movie_and_series.jpg" alt="Banner">
     </div>
     <div class="container">
+        <div class="return-btn">
+            <a href="../../blog-agent/">Return to Home Page</a>
+        </div>
+    
         <header>
             <h1>Rise of Turkish Cinema and TV as Global Cultural Phenomena</h1>
         </header>

@@ -83,6 +83,7 @@
     fetch("blog-list.json")
       .then(response => response.json())
       .then(blogs => {
+        blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
         let blogList = document.getElementById("blog-list");
         blogs.forEach(blog => {
           let listItem = document.createElement("li");
