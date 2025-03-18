@@ -19,7 +19,13 @@ jobs:
           echo "[" > blog-list.json
           for file in blogs/*.html; do
             title=$(grep -o '<title>.*</title>' "$file" | sed 's/<\/\?title>//g')
-            upload_date=$(git log --diff-filter=A --follow --format=%aI -- "$file" | tail -1)
+            upload_date=$(git log --diff-filter=A --follow --format=%aI -- "$file" | tail -1 || echo "Unknown")
+
+            # If no commit history found, use the current date
+            if [[ "$upload_date" == "Unknown" || -z "$upload_date" ]]; then
+              upload_date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+            fi
+            
             echo "{ \"title\": \"$title\", \"url\": \"$file\", \"date\": \"$upload_date\" }," >> blog-list.json
           done
           sed -i '$ s/,$//' blog-list.json
