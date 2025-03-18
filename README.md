@@ -13,4 +13,4 @@ GitHub API for file storage and version control
 Automation Tools for orchestrating multiple processes
 Conditional Logic & Workflow Management for decision-making within agents.
 
-![image](https://github.com/user-attachments/assets/c8fede1a-5f23-40f8-8349-cf4ac5365f50)
+![image](https://github.com/user-attachments/assets/2c6204d3-feec-4cb0-9971-8df86b18f999)
