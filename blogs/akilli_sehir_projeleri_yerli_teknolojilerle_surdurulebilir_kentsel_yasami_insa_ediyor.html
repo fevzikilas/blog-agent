@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City Projects Build Sustainable Urban Life with Domestic Technologies</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ff6600;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background: #000000;
+            color: #ff6600;
+            border: 2px solid #ff6600;
+            border-radius: 30px;
+            text-decoration: none;
+            z-index: 1000;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
+        }
+
+        .home-button:hover {
+            background: #ff6600;
+            color: #000000;
+            transform: scale(1.05);
+        }
+
+        .banner {
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner img {
+            height: 100%;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: cover;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 0;
+        }
+
+        article {
+            background: rgba(26, 26, 26, 0.9);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 15px;
+            border-left: 5px solid #ff6600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 102, 0, 0.2);
+        }
+
+        h2 {
+            color: #ff9933;
+            margin: 0 0 20px 0;
+            font-size: 2.2em;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.1em;
+            margin: 15px 0;
+            color: #ffcc99;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        ::selection {
+            background: #ff6600;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <a href="../../blog-agent/" class="home-button">← Return to Home</a>
+
+    <header class="banner">
+        <img src="../akilli_sehir_projeleri_yerli_teknolojilerle_surdurulebilir_kentsel_yasami_insa_ediyor.jpg" alt="Smart city landscape with sustainable technology">
+    </header>
+
+    <main class="container">
+        <article style="animation-delay: 0.2s">
+            <h2>Renewable Energy Integration: Powering Cities with Sunshine and Wind</h2>
+            <p>Imagine a neighborhood where every rooftop hums with solar panels designed by local engineers, and wind turbines blend seamlessly into the skyline. Cities like Lisbon and Seoul are doing just this, using homegrown tech to turn urban landscapes into renewable energy hubs...</p>
+        </article>
+
+        <article style="animation-delay: 0.4s">
+            <h2>AI-Driven Traffic Management: Untangling Gridlock, One Algorithm at a Time</h2>
+            <p>Imagine a city where traffic flows like a well-conducted symphony. Traffic jams aren't just annoying-they're environmental nightmares. Idling cars spew pollutants, turning streets into toxic tunnels...</p>
+        </article>
+
+        <article style="animation-delay: 0.6s">
+            <h2>Smart Waste Solutions: From Trash to Treasure</h2>
+            <p>What if your trash could power your home? Cities like San Francisco and Singapore are turning waste into energy with AI-guided systems...</p>
+        </article>
+
+        <article style="animation-delay: 0.8s">
+            <h2>Participatory Urban Governance: Your Voice, Your City</h2>
+            <p>Democracy isn't just for election season anymore. Cities like Barcelona and Taipei use apps like Decidim and Pol.is to crowdsource ideas for park designs, bike lanes, and disaster plans...</p>
+        </article>
+
+        <article style="animation-delay: 1.0s">
+            <h2>Eco-Friendly Infrastructure: Building Green from the Ground Up</h2>
+            <p>What's the secret to a climate-proof city? Start with the dirt beneath your feet. Architects in Vietnam use bamboo-a fast-growing local material-to construct schools and homes that stay cool without AC...</p>
+        </article>
+    </main>
+
+    <script>
+        // Add staggered animation trigger
+        document.addEventListener('DOMContentLoaded', function() {
+            const articles = document.querySelectorAll('article');
+            articles.forEach((article, index) => {
+                article.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
+
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
