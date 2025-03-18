@@ -36,10 +36,10 @@
             transform: scale(1.1);
         }
         header {
-            background: #000 url("../Ölümün Karşısında İnsan_ Dehşet Yönetim Kuramı.jpg") no-repeat center center/cover;
+            background: #000 url("../Ölümün Karşısında İnsan_ Dehşet Yönetim Kuramı.jpg") no-repeat center center/contain;
             height: 100vh;
             position: relative;
-            display: flex;
+            display: block;
             align-items: center;
             justify-content: center;
             text-align: center;
@@ -50,15 +50,16 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            width: auto;
             height: 100%;
             background: rgba(0,0,0,0.4);
         }
         header h1 {
-            font-size: 4em;
+            font-size: 2em;
             text-transform: uppercase;
             letter-spacing: 4px;
-            position: relative;
+            position: center;
+            padding-top: 30vh;
             text-shadow: 3px 3px 0px #FFA500;
             animation: fadeIn 1.5s ease-out;
         }
@@ -105,11 +106,13 @@
     </style>
 </head>
 <body>
-    <button class="home-button" onclick="window.location.href='../../blog-agent/'">← Research Hub</button>
+
     <header>
         <h1>Humanity Against Death:<br>Terror Management Theory</h1>
     </header>
     <main>
+    <a href="../../blog-agent/" class="home-button">← Home</a>
+
         <article>
             <p>Picture this: You're scrolling through social media, binge-watching a show, or grinding toward a promotion at work. Ever wonder why we bury ourselves in *stuff*—goals, likes, relationships, Netflix marathons? What if all this hustle is just a grand detour to avoid thinking about the elephant in the room: the fact that, one day, we won't be here?</p>
             

@@ -15,15 +15,29 @@
         }
 
         .banner-container {
-            width: 100%;
+            width: auto;
             overflow: hidden;
             border-bottom: 3px solid #ff6600;
+            text-align: center;
+            color: #ff6600;
+        }
+
+        .banner-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            font-size: 2em;
+            font-weight: bold;
+            width: 60%;
         }
 
         .banner-img {
-            width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
+            width: auto;
+            display: center;
         }
 
         .container {
@@ -87,11 +101,12 @@
 <body>
     <div class="banner-container">
         <img src="../Turkiye_Organik_Dogal_Urun_Talep_Yerli_Uretici_Trendler.jpg" alt="Organic Products Banner" class="banner-img">
+        <div class="banner-title">The Demand for Organic and Natural Products in Türkiye Creates New Trends Supporting Local Producers</div>
     </div>
 
+
     <div class="container">
-        <h1 id="mainHeading">The Demand for Organic and Natural Products in Türkiye Creates New Trends Supporting Local Producers</h1>
-        
+
         <div class="content">
             <p><span class="highlight">Growing consumer awareness</span> about health and sustainability is driving a significant shift in Türkiye's agricultural sector. Local producers are adapting to meet the rising demand for organic products through innovative farming practices and eco-friendly distribution networks.</p>
             

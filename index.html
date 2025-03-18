@@ -28,6 +28,7 @@
         }
         a:hover {
             text-decoration: underline;
+            font-size: 1.1em;
         }
         .header {
             text-align: center;
@@ -47,17 +48,17 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .blog-list li:hover {
-            background: #444;
+            background: #444444;
             transform: translateY(-5px);
         }
         .blog-list li a {
             display: block;
-            font-size: 1.2em;
+            font-size: 1em;
             font-weight: bold;
         }
         .blog-list li span {
             display: block;
-            font-size: 0.9em;
+            font-size: 0.7em;
             color: #bbb;
             margin-top: 5px;
         }
@@ -70,7 +71,7 @@
         </div>
         <ul id="blog-list"></ul>
     </div>
-
+    <br><br><br><br><br><br>
     <footer style="text-align: center; padding: 20px; border-top: 1px solid #444; position: fixed; bottom: 0; width: 100%; height: 5%; background-color: #1e1e1e;">
         <a href="https://www.linkedin.com/in/fevzikilas" target="_blank" style="margin: 0 10px; color: #ff9800;">LinkedIn</a>
         <a href="https://github.com/fevzikilas" target="_blank" style="margin: 0 10px; color: #ff9800;">GitHub</a>
@@ -86,9 +87,13 @@
         blogs.forEach(blog => {
           let listItem = document.createElement("li");
           listItem.innerHTML = `
-            <a href="${blog.url}">
-              <div style="font-size: 1.5em; color: #ff9800;">${blog.title}</div>
-              <div style="font-size: 0.9em; color: #bbb; margin-top: 5px;">${blog.date}</div>
+            <a href="${blog.url}" >
+                <div style="font-size: 1em; color: #ff9800;margin-top: 10px; ">
+                    ${blog.title}
+                </div>
+                <div style="font-size: 0.7em; color: #bbb; margin-top: 5px;" >
+                    ${new Date(blog.date).toLocaleString('tr-TR', { year: '2-digit', month: '2-digit', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'  })}
+                </div>
             </a>`;
           blogList.appendChild(listItem);
         });
