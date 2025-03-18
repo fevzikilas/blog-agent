@@ -13,16 +13,22 @@ jobs:
         uses: actions/checkout@v3
         with:
           persist-credentials: false
+          fetch-depth: 0  # Ensure full commit history
 
       - name: Generate Blog List JSON
         run: |
+          if [ ! -d "blogs" ]; then
+            echo "No blogs directory found, skipping blog list update."
+            exit 0
+          fi
+
           echo "[" > blog-list.json
           for file in blogs/*.html; do
             title=$(grep -o '<title>.*</title>' "$file" | sed 's/<\/\?title>//g')
-            upload_date=$(git log --diff-filter=A --follow --format=%aI -- "$file" | tail -1 || echo "Unknown")
+            upload_date=$(git log --diff-filter=A --follow --format=%aI -- "$file" | tail -1 || true)
 
-            # If no commit history found, use the current date
-            if [[ "$upload_date" == "Unknown" || -z "$upload_date" ]]; then
+            # If no commit history, use the current date
+            if [ -z "$upload_date" ]; then
               upload_date=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
             fi
             
