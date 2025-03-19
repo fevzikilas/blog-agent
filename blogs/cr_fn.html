@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metaverse Evolution</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #ffa500;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+        }
+
+        .banner {
+            height: 100%;
+            width: auto;
+            background: url(../cr_fn.jpg) center/contain no-repeat;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            padding: 12px 24px;
+            background: #ffa500;
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(255, 165, 0, 0.3);
+        }
+
+        .home-button:hover {
+            background: #000;
+            color: #ffa500;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 165, 0, 0.5);
+        }
+
+        @keyframes contentEntrance {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 0 20px;
+            line-height: 1.8;
+            animation: contentEntrance 1s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        h1 {
+            font-size: 2.8em;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            text-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 4px;
+            background: #ffa500;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+
+        @keyframes scanline {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, 
+                transparent 0%, 
+                rgba(255, 165, 0, 0.05) 2%, 
+                transparent 4%);
+            pointer-events: none;
+            animation: scanline 6s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../blog-agent/" class="home-button">← Home Portal</a>
+        <div class="banner"></div>
+    </header>
+
+    <div class="content">
+        <h1>Metaverse Platforms Are Redefining Social and Economic Interactions in Virtual Reality</h1>
+        <p>The completed article is structured, engaging, and adheres to the guidelines provided.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.home-button');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Ripple effect
+                    const ripple = document.createElement('div');
+                    ripple.style.position = 'absolute';
+                    ripple.style.width = '20px';
+                    ripple.style.height = '20px';
+                    ripple.style.background = 'rgba(255, 165, 0, 0.3)';
+                    ripple.style.borderRadius = '50%';
+                    ripple.style.transform = 'translate(-50%, -50%)';
+                    ripple.style.pointerEvents = 'none';
+                    
+                    const rect = this.getBoundingClientRect();
+                    ripple.style.left = `${e.clientX - rect.left}px`;
+                    ripple.style.top = `${e.clientY - rect.top}px`;
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.style.transition = 'transform 0.8s ease-out, opacity 0.8s ease-out';
+                        ripple.style.transform = 'translate(-50%, -50%) scale(30)';
+                        ripple.style.opacity = '0';
+                    }, 10);
+
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 500);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

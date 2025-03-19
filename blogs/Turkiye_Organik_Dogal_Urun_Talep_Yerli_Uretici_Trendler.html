@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Trends in Türkiye</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ff6600;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        .banner-container {
+            width: auto;
+            overflow: hidden;
+            border-bottom: 3px solid #ff6600;
+            text-align: center;
+            color: #ff6600;
+        }
+
+        .banner-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            font-size: 2em;
+            font-weight: bold;
+            width: 60%;
+        }
+
+        .banner-img {
+            height: 100%;
+            width: auto;
+            display: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(255,102,0,0.4);
+            border-left: 5px solid #ff6600;
+            padding-left: 20px;
+        }
+
+        .content {
+            background: rgba(255,102,0,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid #ff6600;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff6600;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+
+        .home-button:hover {
+            background-color: #000000;
+            color: #ff6600;
+            box-shadow: 0 0 15px #ff6600;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ff6600; }
+            50% { text-shadow: 0 0 20px #ff6600, 0 0 30px #ff6600; }
+            100% { text-shadow: 0 0 10px #ff6600; }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+        <img src="../Turkiye_Organik_Dogal_Urun_Talep_Yerli_Uretici_Trendler.jpg" alt="Organic Products Banner" class="banner-img">
+        <div class="banner-title">The Demand for Organic and Natural Products in Türkiye Creates New Trends Supporting Local Producers</div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="content">
+            <p><span class="highlight">Growing consumer awareness</span> about health and sustainability is driving a significant shift in Türkiye's agricultural sector. Local producers are adapting to meet the rising demand for organic products through innovative farming practices and eco-friendly distribution networks.</p>
+            
+            <p>The domestic organic market has seen <span class="highlight">35% annual growth</span> over the past three years, with particular strength in urban centers like Istanbul, Ankara, and Izmir. This trend is creating new opportunities for small-scale farmers while challenging traditional agricultural models.</p>
+
+            <p>Government initiatives and certification programs are helping to standardize organic production methods across the country. However, challenges remain in <span class="highlight">supply chain optimization</span> and consumer education about genuine organic certification markers.</p>
+        </div>
+
+        <a href="../../blog-agent/" class="home-button">Return to Homepage</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const heading = document.getElementById('mainHeading');
+            let hueRotation = 0;
+
+            heading.addEventListener('mouseover', function() {
+                this.style.animation = 'glow 1.5s ease-in-out infinite';
+            });
+
+            heading.addEventListener('mouseout', function() {
+                this.style.animation = '';
+            });
+
+            setInterval(() => {
+                hueRotation = (hueRotation + 2) % 360;
+                document.documentElement.style.setProperty('--hue-rotation', `${hueRotation}deg`);
+            }, 50);
+        });
+    </script>
+</body>
+</html>

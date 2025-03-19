@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Trends with Local Influencers</title>
+    <style>
+        body {
+            font-family: 'Arial Black', Gadget, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #FF6600;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header img {
+            height: 100%;
+            width: auto;
+            object-fit: cover;
+            filter: saturate(140%) contrast(110%);
+        }
+
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 12px 24px;
+            background: rgba(0,0,0,0.8);
+            border: 2px solid #FF6600;
+            color: #FF6600;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .home-button:hover {
+            background: #FF6600;
+            color: #000;
+            transform: scale(1.05);
+        }
+
+        #content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 0 rgba(255,102,0,0.3);
+            animation: titleGlow 2s infinite alternate;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            border-left: 4px solid #FF6600;
+            padding-left: 20px;
+            margin: 25px 0;
+        }
+
+        @keyframes titleGlow {
+            from { text-shadow: 3px 3px 0 rgba(255,102,0,0.3); }
+            to { text-shadow: 5px 5px 15px rgba(255,102,0,0.6); }
+        }
+
+        ::selection {
+            background: #FF6600;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../../blog-agent/" class="home-button">← Home</a>
+        <img src="../yerli_influencerlar_sosyal_medya_trendleri_dijital_pazarlama.jpg" alt="Digital Marketing Trends">
+    </header>
+
+    <div id="content">
+        <h1>Local Influencers Redefine Digital Marketing Through Social Media Trends</h1>
+        <p>Turkish social media innovators are reshaping brand strategies by creating authentic connections with audiences. Their unique approach combines cultural relevance with digital expertise, resulting in unprecedented engagement rates.</p>
+        <p>By leveraging platforms like Instagram and TikTok, these influencers develop creative campaigns that blend traditional values with modern aesthetics. This synergy creates viral moments that brands are increasingly relying on for market penetration.</p>
+        <p>The evolving landscape sees influencers transitioning from content creators to strategic partners, collaborating directly with marketing teams to co-develop products and campaigns that resonate with local consumer behavior patterns.</p>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            const scrolled = window.pageYOffset / (header.offsetHeight * 0.5);
+            header.style.opacity = 1 - Math.min(scrolled, 0.5);
+        });
+    </script>
+</body>
+</html>
