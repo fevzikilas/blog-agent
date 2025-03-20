@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism: Turning Dreams to Reality</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #ff6a00;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        .banner-container {
+            height: 60vh;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner {
+            height: 100%;
+            width: auto;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin: 2rem 0;
+            text-shadow: 0 0 10px rgba(255,106,0,0.5);
+        }
+
+        .home-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            background-color: #ff6a00;
+            color: #000;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            margin: 20px 0;
+        }
+
+        .home-button:hover {
+            background-color: #000;
+            color: #ff6a00;
+            box-shadow: 0 0 15px #ff6a00;
+        }
+
+        .button-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            filter: invert(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+        <img src="../Uzay-Turizmi-Ticari-Uzay-Seyahatleri-Ile-Hayaller-Gerceke-Donusuyor.md.jpg" alt="Space tourism banner" class="banner">
+    </div>
+    
+    <div class="content-wrapper">
+        <h1 id="title"></h1>
+        <div id="content"></div>
+        
+        <a href="../../blog-agent/" class="home-button">
+            <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+            </svg>
+            Return to Homepage
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('title').innerHTML = 
+                'Space Tourism Is Turning Dreams into Reality With the Rise of Commercial Space Travel';
+
+            document.getElementById('content').
