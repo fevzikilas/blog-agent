@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biotech Advances Enable Personalized Disease Treatment</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #ffa500;
+            background-color: #000;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        #banner {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: #000;
+        }
+
+        #banner img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(255,165,0,0.3);
+        }
+
+        h2 {
+            color: #ff8c00;
+            border-left: 4px solid #ffa500;
+            padding-left: 15px;
+            margin: 30px 0;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            margin: 40px 0;
+            background: #ffa500;
+            color: #000;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: #000;
+            color: #ffa500;
+            box-shadow: 0 0 15px #ffa500;
+            transform: translateY(-2px);
+        }
+
+        .button svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            fill: currentColor;
+        }
+
+        ::selection {
+            background: #ffa500;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header id="banner">
+        <img src="../Biyoteknoloji-Hastalik-Tedavisinde-Kisisel-Yaklasim.jpg" alt="Personalized Medicine Concept">
+    </header>
+
+    <div class="container">
+        <h1>Biotech Advances Enable Personalized Disease Treatment</h1>
+        
+        <h2>The New Era of Precision Medicine</h2>
+        <p>Recent breakthroughs in biotechnology are revolutionizing how we approach disease treatment. By leveraging cutting-edge technologies like CRISPR gene editing and AI-driven drug discovery, researchers can now develop therapies tailored to individual patients' genetic makeup.</p>
+
+        <h2>Key Innovations Driving Change</h2>
+        <p>From 3D-printed organs to personalized cancer vaccines, the medical field is witnessing unprecedented advancements. Machine learning algorithms analyze vast genomic datasets to predict disease risks and recommend preventive measures, while nanotechnology enables targeted drug delivery at the cellular level.</p>
+
+        <h2>Ethical Considerations</h2>
+        <p>As we push the boundaries of medical science, important questions emerge about accessibility, data privacy, and the ethical implications of genetic modification. The medical community continues to develop frameworks to ensure responsible innovation in this rapidly evolving field.</p>
+
+        <a href="../../blog-agent/" class="button">
+            <svg viewBox="0 0 24 24">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            Return to Homepage
+        </a>
+    </div>
+
+    <script>
+        // Add subtle animation to banner image
+        document.addEventListener('DOMContentLoaded', () => {
+            const banner = document.querySelector('#banner img');
+            let scale = 1;
+            
+            const animate = () => {
+                scale = scale === 1 ? 1.02 : 1;
+                banner.style.transform = `scale(${scale})`;
+                setTimeout(animate, 8000);
+            };
+            
+            banner.style.transition = 'transform 8s ease-in-out';
+            animate();
+        });
+    </script>
+</body>
+</html>
